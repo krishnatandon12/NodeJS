@@ -1,0 +1,2 @@
+Here is the merge of 2 files - first text file and this is second text file.
+This is new text appended everytime we run this file. 
