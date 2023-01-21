@@ -8,7 +8,7 @@ const { readFileSync, writeFileSync } = require("fs");
 //readFileSync will accept 2 parameters => 
 // 1. path, where the file is stored
 // 2. Encoding, usually we opt for UTF-8 as utf8.
-
+console.log("start");
 const first = readFileSync("./content/first.txt", "utf8");
 const second = readFileSync("./content/second.txt", "utf8");
 
@@ -20,9 +20,12 @@ writeFileSync("./content/result-sync.txt", `Here is the merge of 2 files - ${fir
 
 //Appending the content by appending to new/existing file
 writeFileSync("./content/result-sync.txt",
-    `This is new text appended everytime we run this file. \n`,
+    `This is new text appended everytime we run this file !!!!!!. \n`,
     {
         encoding: "utf8",
         flag: "a"
     }
 );
+
+
+console.log("end");
