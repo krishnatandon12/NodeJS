@@ -1,16 +1,17 @@
-const writeFileSync = require("fs");
+const { writeFileSync } = require("fs");
 const http = require("http");
-
-//console.log(http);
 
 //Create a new server by using createServer() method
 const server = http.createServer((req, res) => {
     //TODO
-    // const req_obj = req;
-    // writeFileSync("./content/sub/req-obj.txt", `${req_obj}`, {
+    // writeFileSync("./content/sub/req-obj.txt", JSON.stringify(req), {
     //     encoding: "utf8"
     // });
-    //console.log(req);
+    // console.log(req);
+    //Node does not allow printing of circular objects. RESEARCH more on this.
+    console.log("req data");
+    console.log(req);
+
     if (req.url === "/") {
         res.end("Welcome to our Node JS homepage");
         //The above line is a combination for
